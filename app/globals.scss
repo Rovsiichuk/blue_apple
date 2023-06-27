@@ -1,0 +1,338 @@
+@import './variables';
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  font-weight: 500;
+  font-size: 16px;
+  font-style: normal;
+  font-family: 'Satoshi', sans-serif;
+}
+body{
+  background: $color-white-gray;
+}
+
+li{
+  list-style: none;
+}
+
+.menu{
+  display: flex;
+  gap: 43px;
+  align-items: center;
+}
+h1{
+  font-size: 64px;
+  color: $color-black;
+  line-height: 120%;
+  font-weight: 500;
+}
+
+h3{
+  font-size: 36px;
+  color: $color-black;
+  line-height: 150%;
+  font-weight: 500;
+}
+
+.content-desc{
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 150%;
+  color: $color-light-black;
+}
+.content-desc-med{
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 140%;
+  color: $color-light-black;
+}
+
+.banner-img{
+  transition: 0.5s all;
+  transform: scale(1);
+  z-index: 0;
+  &:hover{
+    transform: scale(1.05);
+    z-index: 99;
+    cursor: pointer;
+  }
+}
+
+.number-info{
+  display: flex;
+  max-width: 1248px;
+  width: 100%;
+  margin: 50px auto 0 auto;
+}
+
+.number-info-item{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center;
+  width: 416px;
+
+  .number{
+    font-size: 128px;
+    font-weight: 500;
+    line-height: 128px;
+    color: $color-purple;
+  }
+}
+
+.title-list{
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 140%;
+  color: $color-black;
+  width: 196px;
+  text-align: right;
+}
+.whatWeDo-container{
+  height: 218px;
+  display: flex;
+  gap: 121px;
+
+  .list{
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 76px;
+    flex: 1;
+    gap: 20px;
+
+    li{
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+      color: $color-light-black;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      &:before{
+        content: url("../public/check-icon.svg");
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        left: -40px;
+      }
+
+      &:nth-child(odd){
+        width: 246px;
+        margin-right: 12px;
+      }
+    }
+  }
+}
+
+.whatWeDo{
+  text-align: center;
+  margin: 96px 0;
+}
+
+.dark-btn{
+  border-radius: 10px;
+  background: $color-black;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 16px 87px;
+}
+.light-btn{
+  border-radius: 10px;
+  border: 1px solid $color-black;
+  background: transparent;
+  color: $color-black;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.logoSliderSection{
+  margin-top: 150px;
+  padding: 96px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.label{
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: $color-purple;
+}
+
+.whySection{
+  text-align: center;
+  margin-bottom: 270px;
+
+  .card{
+    width: 314px;
+    height: 314px;
+    border-radius: 10px;
+    background: #ffffff;
+    padding: 26px 17px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .number{
+      width: 47.88px;
+      height: 47.88px;
+      border-radius: 27.93px;
+      border: 7.98px solid var(--secondary-purple-rose-80, rgba(249, 245, 255, 0.80));
+      background: var(--secondary-purple-rose, #F4EBFF);
+
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 137.5%;
+      letter-spacing: 0.1px;
+      text-transform: uppercase;
+      color: $color-purple;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .title{
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 140%;
+      color: $color-black;
+    }
+    .description{
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      color: $color-light-black;
+      margin-top: 16px;
+      opacity: 0;
+    }
+  }
+}
+
+.reviewSection{
+  text-align: center;
+  margin-bottom: 230px;
+
+  .card{
+    padding: 24px;
+    background: #ffffff;
+    text-align: left;
+    width: 384px;
+    .name{
+      margin-top: 20px;
+      font-size: 16px;
+      color: $color-black;
+      font-weight: 700;
+      line-height: 24px;
+    }
+    .role{
+      color: $color-purple;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+    .review{
+      margin-top: 12px;
+      font-size: 24px;
+      line-height: 140%;
+      color: $color-light-black;
+    }
+  }
+}
+
+.contactForm{
+  padding: 69px 0 87px 69px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 38px 24px -24px rgba(72, 68, 255, 0.24);
+  width: 1170px;
+  margin: 0 auto 145px auto;
+  position: relative;
+
+  &:before{
+    content: url("../public/logoBig.svg");
+    width: 350px;
+    height: 353px;
+    position: absolute;
+    left: 37px;
+    bottom: 0;
+  }
+
+  .title{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 140%;
+    color: $color-black;
+  }
+
+  input{
+    padding: 17px 0;
+    border: none;
+    border-bottom: 2px solid var(--content-20, #B2B7C2);
+    opacity: 0.5;
+
+    &::placeholder{
+      color: $color-gray;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+  }
+  .secondary-btn{
+    margin-top: 24px;
+  }
+}
+
+.secondary-btn{
+  border-radius: 10px;
+  border: 2px solid $color-purple;
+  background: $color-purple;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #ffffff;
+  padding: 17px 0;
+}
+
+footer{
+  color: #ffffff;
+  background: $color-black;
+
+  .contact-info{
+    //padding: 0 55px 89px 55px;
+    div{
+      border-radius: 8px;
+      border: 1px solid $color-light-black;
+      box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+      padding: 14px 20px;
+    }
+  }
+}
+
+.slider-logo {
+  //height: 52px;
+  width: 100%;
+  //margin-top: 30px;
+  vertical-align: center;
+  overflow-x: hidden;
+
+  .slick-track {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .slider-item {
+    width: fit-content;
+  }
+}
