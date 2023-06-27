@@ -8,7 +8,7 @@ import Footer from '@/app/Footer'
 import Slider from 'react-slick'
 
 const Component = () => {
-  const [openCardId, setOpenCardId] = useState(null);
+  const [openCardId, setOpenCardId] = useState(null)
   const settingsLogo = {
     className: 'slider variable-width',
     centerMode: true,
@@ -72,8 +72,8 @@ const Component = () => {
       <Header />
       <div style={ { maxWidth: '1120px', display: 'flex', flexDirection: 'column', margin: '0 auto' } }>
         <div style={ { textAlign: 'center', marginBottom: '48px', marginTop: '168px' } }>
-          <motion.h1 className="mainTitle" style={ { maxWidth: '805px', margin: '0 auto 64px auto' } } variants={variantsMain} initial='hidden' whileInView="visible" custom={4}>BlueApple is UX/UI design and branding agency</motion.h1>
-          <motion.div className="content-desc" variants={variantsMain} initial='hidden' whileInView="visible" custom={6}>We create innovative digital products, branding, and web designs.</motion.div>
+          <motion.h1 className="mainTitle" style={ { maxWidth: '805px', margin: '0 auto 64px auto' } } variants={ variantsMain } initial="hidden" whileInView="visible" custom={ 4 }>BlueApple is UX/UI design and branding agency</motion.h1>
+          <motion.div className="content-desc" variants={ variantsMain } initial="hidden" whileInView="visible" custom={ 6 }>We create innovative digital products, branding, and web designs.</motion.div>
         </div>
         <div style={ { height: '610px', display: 'flex', flexWrap: 'wrap', gap: '10px' } }>
           {
@@ -114,8 +114,8 @@ const Component = () => {
           <h1 className="mainTitle" style={ { maxWidth: '805px', margin: '96px auto 24px auto' } }>What We Do?</h1>
           <div className="content-desc-med" style={ { maxWidth: '788px', margin: '0 auto' } }>Utilizing an iterative approach informed by user testing, we focus on your business objectives with every project we touch.</div>
         </div>
-        <div style={ { margin: '0 auto', maxWidth: '874px', display: 'flex', flexDirection: 'column', gap: '52px' } } >
-          <motion.div className="whatWeDo-container" variants={variants} initial='hidden' whileInView="visible" custom={4}>
+        <div style={ { margin: '0 auto', maxWidth: '874px', display: 'flex', flexDirection: 'column', gap: '52px' } }>
+          <motion.div className="whatWeDo-container" variants={ variants } initial="hidden" whileInView="visible" custom={ 4 }>
             <div className="title-list">Research & Competitive Analysis</div>
             <ul className="list">
               <li>Heuristic evaluations</li>
@@ -124,7 +124,7 @@ const Component = () => {
               <li>UI/UX audit</li>
             </ul>
           </motion.div>
-          <motion.div className="whatWeDo-container" variants={variants} initial='hidden' whileInView="visible" custom={6}>
+          <motion.div className="whatWeDo-container" variants={ variants } initial="hidden" whileInView="visible" custom={ 6 }>
             <div className="title-list">Branding</div>
             <ul className="list">
               <li>Logo design</li>
@@ -133,7 +133,7 @@ const Component = () => {
               <li>Website & Mobile Apps</li>
             </ul>
           </motion.div>
-          <motion.div className="whatWeDo-container" variants={variants} initial='hidden' whileInView="visible" custom={8}>
+          <motion.div className="whatWeDo-container" variants={ variants } initial="hidden" whileInView="visible" custom={ 8 }>
             <div className="title-list">UI/UX Design</div>
             <ul className="list">
               <li>Interactive Prototyping</li>
@@ -143,7 +143,7 @@ const Component = () => {
             </ul>
           </motion.div>
         </div>
-        <motion.div variants={variants} initial='hidden' whileInView="visible" custom={5}>
+        <motion.div variants={ variants } initial="hidden" whileInView="visible" custom={ 5 }>
           <button className="dark-btn">More</button>
         </motion.div>
 
@@ -151,8 +151,8 @@ const Component = () => {
 
       <div className="logoSliderSection">
         <div className="label">Join 50+ companies already growing</div>
-        {/*<ul style={{ display: 'flex', alignItems: 'center', marginBottom: '173px'}}>*/}
-          <Slider { ...settingsLogo } className="slider-logo">
+        {/*<ul style={{ display: 'flex', alignItems: 'center', marginBottom: '173px'}}>*/ }
+        <Slider { ...settingsLogo } className="slider-logo">
           {
             ['1', '2', '3', '4', '5', '6'].map(path => {
               return (
@@ -165,8 +165,8 @@ const Component = () => {
               )
             })
           }
-          </Slider>
-        {/*</ul>*/}
+        </Slider>
+        {/*</ul>*/ }
       </div>
 
       <div className="whySection">
@@ -174,23 +174,23 @@ const Component = () => {
           <h1 className="mainTitle" style={ { margin: '0 auto 24px auto' } }>Why BlueApple?</h1>
           <div className="content-desc-med" style={ { maxWidth: '577px', margin: '0 auto' } }>We are a team of creative, passionate, and dedicated art directors and product and UI/UX designers.</div>
         </div>
-        <div style={{display: 'flex', gap: '10px', justifyContent: 'center'}}>
+        <div style={ { display: 'flex', gap: '10px', justifyContent: 'center' } }>
           {
             cardWhyBA.map(x => {
-              const isCardOpen = openCardId === x.id;
+              const isCardOpen = openCardId === x.id
               return (
-                <motion.div key={x.id} className="card"
-                            onMouseEnter={() => setOpenCardId(x.id)}
-                            onMouseLeave={() => setOpenCardId(null)}
+                <motion.div key={ x.id } className="card"
+                            onMouseEnter={ () => setOpenCardId(x.id) }
+                            onMouseLeave={ () => setOpenCardId(null) }
                 >
-                  <div className="number">{x.id}</div>
-                  <div className="title">{x.title}</div>
+                  <div className="number">{ x.id }</div>
+                  <div className="title">{ x.title }</div>
                   {
                     isCardOpen && <motion.div className="description hide"
-                                              animate={{ y: -15, opacity: 1 }}
-                                              transition={{ type: "spring", stiffness: 100 }}
+                                              animate={ { y: -15, opacity: 1 } }
+                                              transition={ { type: 'spring', stiffness: 100 } }
 
-                    >{x.description}</motion.div>
+                    >{ x.description }</motion.div>
                   }
                 </motion.div>
               )
@@ -201,15 +201,15 @@ const Component = () => {
 
       <div className="reviewSection">
         <h1 className="mainTitle" style={ { margin: '0 auto 50px auto' } }>What our clients say</h1>
-        <div style={{display: 'flex', gap: '32px', justifyContent: 'center'}}>
+        <div style={ { display: 'flex', gap: '32px', justifyContent: 'center' } }>
           {
             cardReview.map(x => {
               return (
-                <div key={x.id} className="card">
+                <div key={ x.id } className="card">
                   <img src={ `../avatar/${ x.img }.png` } />
-                  <div className="name">{x.name}</div>
-                  <div className="role">{x.role}</div>
-                  <div className="review">{x.review}</div>
+                  <div className="name">{ x.name }</div>
+                  <div className="role">{ x.role }</div>
+                  <div className="review">{ x.review }</div>
                 </div>
               )
             })
@@ -217,17 +217,17 @@ const Component = () => {
         </div>
       </div>
 
-      <div className="contactForm" style={{display: 'flex', gap: '70px'}}>
+      <div className="contactForm" style={ { display: 'flex', gap: '70px' } }>
         <div>
-          <div className="label">Let's talk</div>
+          <div className="label">Lets talk</div>
           <div className="title">Talk to us about your next project!</div>
         </div>
-        <div style={{width: '413px'}}>
-          <form action="" style={{display: 'flex', flexDirection: 'column', gap: '18px'}}>
-            <input type="text" placeholder="Name and Surname"/>
-            <input type="text" placeholder="Company"/>
-            <input type="text" placeholder="Phone Number"/>
-            <input type="text" placeholder="Email Address"/>
+        <div style={ { width: '413px' } }>
+          <form action="" style={ { display: 'flex', flexDirection: 'column', gap: '18px' } }>
+            <input type="text" placeholder="Name and Surname" />
+            <input type="text" placeholder="Company" />
+            <input type="text" placeholder="Phone Number" />
+            <input type="text" placeholder="Email Address" />
             <button className="secondary-btn">Send</button>
           </form>
         </div>
