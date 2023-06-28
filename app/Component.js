@@ -80,7 +80,7 @@ const Component = () => {
           <div className="number-info">
             <div className="number-info-item">
               <div className="number">
-                <Counter to={100} duration={4} /> <span className="symbol">+</span>
+                <Counter to={400} duration={4} /> <span className="symbol">+</span>
               </div>
               <div className="content-desc-med">Projects Delivered</div>
             </div>
