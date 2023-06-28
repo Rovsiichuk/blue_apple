@@ -1,13 +1,18 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 import Header from '@/app/Header'
 import { motion } from 'framer-motion'
 import { variants, variantsMain } from '@/const/animation'
 import Footer from '@/app/Footer'
 import Slider from 'react-slick'
+import Counter from '@/app/Counter'
+import ReviewsSection from '@/app/ReviewsSection'
+
+
 
 const Component = () => {
+
   const [openCardId, setOpenCardId] = useState(null)
   const settingsLogo = {
     className: 'slider variable-width',
@@ -47,26 +52,7 @@ const Component = () => {
     }
   ]
 
-  const cardReview = [
-    {
-      img: '1',
-      name: 'Jason Seed',
-      role: 'CEO, ActionHRM, Inc',
-      review: 'BlueApple was an essential part of our global rebrand. The team rapidly understood our requirements, quoted quickly and accurately and the execution of the process was top-notch.'
-    },
-    {
-      img: '2',
-      name: 'Wendy Caceres',
-      role: 'CMO, Inseego Corp.',
-      review: 'BlueApple gets it. Whether a professional pitch deck, a trade show booth, or website – they understand how to tell the story visually.'
-    },
-    {
-      img: '3',
-      name: 'Don Haugen',
-      role: 'Creative Director, Inseego Corp.',
-      review: 'Working with BlueApple was like collaborating with an internal team, clear and concise communication, a truly receptive environment.'
-    }
-  ]
+
   return (
     <>
       <Header />
@@ -93,15 +79,21 @@ const Component = () => {
           <h3>Let numbers tell a story</h3>
           <div className="number-info">
             <div className="number-info-item">
-              <div className="number">400+</div>
+              <div className="number">
+                <Counter to={100} duration={4} /> <span className="symbol">+</span>
+              </div>
               <div className="content-desc-med">Projects Delivered</div>
             </div>
             <div className="number-info-item">
-              <div className="number">19+</div>
+              <div className="number">
+                <Counter to={19} duration={4} /> +
+              </div>
               <div className="content-desc-med">Years of helping clients succeed</div>
             </div>
             <div className="number-info-item">
-              <div className="number">$750M</div>
+              <div className="number">
+                $<Counter to={750} duration={4} />M
+              </div>
               <div className="content-desc-med">In funding raised by our clients!</div>
             </div>
 
@@ -111,8 +103,8 @@ const Component = () => {
 
       <div className="whatWeDo">
         <div style={ { margin: '247px auto 64px auto' } }>
-          <h1 className="mainTitle" style={ { maxWidth: '805px', margin: '96px auto 24px auto' } }>What We Do?</h1>
-          <div className="content-desc-med" style={ { maxWidth: '788px', margin: '0 auto' } }>Utilizing an iterative approach informed by user testing, we focus on your business objectives with every project we touch.</div>
+          <motion.h1 className="mainTitle" style={ { maxWidth: '805px', margin: '96px auto 24px auto' } } variants={ variantsMain } initial="hidden" whileInView="visible" custom={ 4 }>What We Do?</motion.h1>
+          <motion.div className="content-desc-med" style={ { maxWidth: '788px', margin: '0 auto' } } variants={ variantsMain } initial="hidden" whileInView="visible" custom={ 6 }>Utilizing an iterative approach informed by user testing, we focus on your business objectives with every project we touch.</motion.div>
         </div>
         <div style={ { margin: '0 auto', maxWidth: '874px', display: 'flex', flexDirection: 'column', gap: '52px' } }>
           <motion.div className="whatWeDo-container" variants={ variants } initial="hidden" whileInView="visible" custom={ 4 }>
@@ -157,7 +149,7 @@ const Component = () => {
             ['1', '2', '3', '4', '5', '6'].map(path => {
               return (
                 <>
-                  <img src={ `../logo/${ path }.svg` } />
+                  <img src={ `../logo/${ path }.svg` } key={ path } />
                 </>
                 // <li key={ path } style={{width: '100%', height: '100%', position: 'relative'}}>
 
@@ -171,8 +163,8 @@ const Component = () => {
 
       <div className="whySection">
         <div style={ { margin: '65px auto 50px auto' } }>
-          <h1 className="mainTitle" style={ { margin: '0 auto 24px auto' } }>Why BlueApple?</h1>
-          <div className="content-desc-med" style={ { maxWidth: '577px', margin: '0 auto' } }>We are a team of creative, passionate, and dedicated art directors and product and UI/UX designers.</div>
+          <motion.h1 className="mainTitle" style={ { margin: '0 auto 24px auto' } } variants={ variantsMain } initial="hidden" whileInView="visible" custom={ 4 }>Why BlueApple?</motion.h1>
+          <motion.div className="content-desc-med" style={ { maxWidth: '577px', margin: '0 auto' } } variants={ variantsMain } initial="hidden" whileInView="visible" custom={ 6 }>We are a team of creative, passionate, and dedicated art directors and product and UI/UX designers.</motion.div>
         </div>
         <div style={ { display: 'flex', gap: '10px', justifyContent: 'center' } }>
           {
@@ -199,23 +191,7 @@ const Component = () => {
         </div>
       </div>
 
-      <div className="reviewSection">
-        <h1 className="mainTitle" style={ { margin: '0 auto 50px auto' } }>What our clients say</h1>
-        <div style={ { display: 'flex', gap: '32px', justifyContent: 'center' } }>
-          {
-            cardReview.map(x => {
-              return (
-                <div key={ x.id } className="card">
-                  <img src={ `../avatar/${ x.img }.png` } />
-                  <div className="name">{ x.name }</div>
-                  <div className="role">{ x.role }</div>
-                  <div className="review">{ x.review }</div>
-                </div>
-              )
-            })
-          }
-        </div>
-      </div>
+      <ReviewsSection />
 
       <div className="contactForm" style={ { display: 'flex', gap: '70px' } }>
         <div>
