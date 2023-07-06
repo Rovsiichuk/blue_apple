@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { variantsMain } from '@/const/animation'
-import RootLayout from '../app/layout'
 import ContactForm from '@/app/ContactForm'
 import Header from '@/app/Header'
 import Footer from '@/app/Footer'

@@ -3,7 +3,6 @@
 import React from 'react'
 import Header from '@/app/Header'
 import Footer from '@/app/Footer'
-import Layout from '../app/layout';
 import { motion } from 'framer-motion'
 import { variantsMain } from '@/const/animation'
 import WhyBa from '@/app/WhyBa'
