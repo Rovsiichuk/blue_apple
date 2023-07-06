@@ -23,10 +23,30 @@ li {
   list-style: none;
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.content{
+  flex: 1;
+}
+
 .menu {
   display: flex;
   gap: 43px;
   align-items: center;
+}
+
+header{
+  a.active{
+    text-decoration: underline;
+  }
 }
 
 h1 {
@@ -194,6 +214,32 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: all 0.3s;
+    position: relative;
+    z-index: 2;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 314px;
+      height: 345px;
+      background: linear-gradient(0deg, rgba(125, 69, 241, 0.12) 0%, rgba(125, 69, 241, 0.12) 100%), rgba(105, 82, 249, 0.12);
+      filter: blur(35px);
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    &:hover{
+      height: 345px;
+      &::after {
+        opacity: 1;
+      }
+    }
 
     .number {
       width: 47.88px;
@@ -416,6 +462,198 @@ h3 {
     gap: 32px;
     .slick-slide {
       max-width: 384px;
+    }
+  }
+}
+
+.about{
+  .whySection{
+    margin-top: 220px;
+  }
+  .card-info{
+    margin: 325px auto 0 auto;
+    display: flex;
+    max-width: 1172px;
+    width: 100%;
+    height: 648px;
+    gap: 44px;
+    flex-shrink: 0;
+
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 64px 64px 12px rgba(72, 68, 255, 0.08);
+
+    .info{
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      margin-left: 66px;
+      padding: 103.5px 0;
+    }
+
+    .title{
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      color: $color-black;
+    }
+
+    .quote{
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      color: $color-black;
+    }
+
+    .name {
+      font-size: 20px;
+      color: $color-light-black;
+      font-weight: 500;
+      line-height: 28px;
+    }
+    .role {
+      color: $color-purple;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+  }
+
+  .menu{
+    a.active{
+      border-bottom: 1px solid $color-black;
+    }
+  }
+  .reviewSection{
+    margin-top: 224px;
+    .card{
+      background: transparent;
+    }
+  }
+  .slider-container{
+    max-width: 584px;
+  }
+  .slider-container .slick-track .slick-slide {
+    max-width: 584px;
+  }
+}
+
+.services{
+  .desc{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    color: $color-light-black;
+    max-width: 670px;
+  }
+  .cards-service{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .card-service{
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 0 8px 46px 0 rgba(72, 68, 255, 0.12);
+
+    .icon{
+      width: 48px;
+      height: 48px;
+      border-radius: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 8px solid var(--secondary-purple-rose-80, rgba(249, 245, 255, 0.80));
+      background: var(--secondary-purple-rose, #F4EBFF);
+    }
+    .title{
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+      color: $color-black;
+    }
+    .desc{
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      color: $color-light-black;
+    }
+    .tags{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .tag{
+      border-radius: 720px;
+      background: var(--secondary-purple-rose-40, rgba(244, 235, 255, 0.40));
+      padding: 12px 24px;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      color: $color-black;
+    }
+  }
+}
+
+.clients{
+  .info-quote{
+    margin-top: 30px;
+    color: $color-light-black;
+    .name{
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px;
+    }
+    .role{
+      margin-top: 8px;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+    }
+  }
+}
+
+
+.clients-grid{
+  display: flex;
+  flex-wrap: wrap;
+  width: 1172px;
+  padding: 96px;
+  //justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  margin: 270px auto 0 auto;
+
+  .client{
+    width: 316px;
+    height: 240px;
+    padding: 26px 20px 36px 28px;
+
+    .logo{
+      img{
+        max-height: 96px;
+      }
+    }
+
+    .text{
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      color: $color-black;
     }
   }
 }

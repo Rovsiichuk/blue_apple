@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { variantsMain } from '@/const/animation'
 import Slider from 'react-slick'
 
-const ReviewsSection = () => {
+const ReviewsSection = ({slidesToShow = 3, title = true}) => {
   const sliderRef = useRef(null);
 
   const goToNextSlide = () => {
@@ -21,7 +21,7 @@ const ReviewsSection = () => {
     dots: false,
     arrows: false,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1
   };
   const cardReview = [
@@ -53,7 +53,9 @@ const ReviewsSection = () => {
   return (
     <>
       <div className="reviewSection">
-        <motion.h1 className="mainTitle" style={ { margin: '0 auto 50px auto' } } variants={ variantsMain } initial="hidden" whileInView="visible" custom={ 4 }>What our clients say</motion.h1>
+        {
+          title && <motion.h1 className="mainTitle" style={ { margin: '0 auto 50px auto' } } variants={ variantsMain } initial="hidden" whileInView="visible" custom={ 4 }>What our clients say</motion.h1>
+        }
         <div className="slider-container">
           <Slider {...settings} ref={sliderRef}>
             {
