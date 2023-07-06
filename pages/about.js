@@ -1,5 +1,5 @@
 'use client'
-
+import '../app/globals.scss'
 import React from 'react'
 import Header from '@/app/Header'
 import Footer from '@/app/Footer'

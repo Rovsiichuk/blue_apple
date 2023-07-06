@@ -4,6 +4,7 @@ import { variantsMain } from '@/const/animation'
 import ContactForm from '@/app/ContactForm'
 import Header from '@/app/Header'
 import Footer from '@/app/Footer'
+import '../app/globals.scss'
 
 const Clients = () => {
   const clientsData = [
