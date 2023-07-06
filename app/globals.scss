@@ -218,21 +218,21 @@ h3 {
     position: relative;
     z-index: 2;
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 314px;
-      height: 345px;
-      background: linear-gradient(0deg, rgba(125, 69, 241, 0.12) 0%, rgba(125, 69, 241, 0.12) 100%), rgba(105, 82, 249, 0.12);
-      filter: blur(35px);
-      z-index: 1;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
+    //&::after {
+    //  content: "";
+    //  position: absolute;
+    //  top: 0;
+    //  left: 0;
+    //  right: 0;
+    //  bottom: 0;
+    //  width: 314px;
+    //  height: 345px;
+    //  background: linear-gradient(0deg, rgba(125, 69, 241, 0.12) 0%, rgba(125, 69, 241, 0.12) 100%), rgba(105, 82, 249, 0.12);
+    //  filter: blur(35px);
+    //  z-index: 1;
+    //  opacity: 0;
+    //  transition: opacity 0.3s;
+    //}
 
     &:hover{
       height: 345px;
