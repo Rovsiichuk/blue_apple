@@ -5,6 +5,7 @@ import ContactForm from '@/app/ContactForm'
 import Header from '@/app/Header'
 import Footer from '@/app/Footer'
 import '../app/globals.scss'
+import Image from 'next/image'
 
 const Clients = () => {
   const clientsData = [
@@ -218,7 +219,7 @@ const Clients = () => {
               {
                 clientsData.map((x, index) => (
                   <div key={index} className="client">
-                    <div className="logo"><img src={`/clients/${x.logo}`} alt={x.logo} /></div>
+                    <div className="logo"><Image src={`/clients/${x.logo}`} alt={x.logo} width={197} height={96} /></div>
                     <div className="text">{x.text}</div>
                   </div>
                 ))

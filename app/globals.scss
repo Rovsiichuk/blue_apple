@@ -657,3 +657,180 @@ h3 {
     }
   }
 }
+
+.cases{
+
+  .content-desc{
+    max-width: 903px;
+    margin: 0 auto;
+  }
+  .cases-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 1416px;
+    margin: 322px auto 0 auto;
+  }
+
+  .case{
+    padding: 64px;
+    border-radius: 16px;
+    background: #FAFAFA;
+    box-shadow: 0 16px 32px -24px rgba(72, 68, 255, 0.72);
+    //backdrop-filter: blur(56.183616638183594px);
+    z-index: 1;
+
+    &.ayla{
+      position: relative;
+      display: flex;
+      .info{
+        max-width: 350px;
+        z-index: 2;
+      }
+      .img1{
+        margin-top: 141px;
+        z-index: 2;
+      }
+      .absoluteImg1{
+        position: absolute;
+        right: 45px;
+        top: -34px;
+        z-index: 3;
+      }
+    }
+    &.trustXyz{
+      max-width: 556px;
+      justify-content: flex-start;
+      position: relative;
+      .info{
+        max-width: 420px;
+      }
+      .img1{
+        margin-bottom: 74px;
+      }
+      .absoluteImg1{
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+    &.inseego{
+      display: flex;
+      align-items: flex-end;
+      gap: 32px;
+      position: relative;
+
+      .info{
+        max-width: 286px;
+      }
+      .img1{
+        z-index: 2;
+      }
+      .absoluteImg1{
+        position: absolute;
+        top: 62px;
+        right: calc(50% - 36px);
+        z-index: 1;
+      }
+    }
+    &.zeitview{
+      display: flex;
+      gap: 15px;
+      .info{
+        max-width: 339px;
+      }
+      .img1{
+        margin-top: 76px;
+      }
+    }
+    &.moloco{
+      display: flex;
+      gap: 123px;
+      position: relative;
+      width: 100%;
+      .info{
+        max-width: 303px;
+      }
+      .img1{
+
+      }
+      .absoluteImg1{
+        position: absolute;
+        top: -34px;
+        right: 56px;
+      }
+    }
+    &.cyris{
+      max-width: 556px;
+      justify-content: flex-start;
+      position: relative;
+      .info{
+        max-width: 327px;
+      }
+      .img1{
+        text-align: right;
+        margin: -112px 12px 49px 0;
+      }
+      .absoluteImg1{
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+    &.vimpelCom{
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      padding: 64px 63px 64px 64px;
+      .info{
+        max-width: 334px;
+      }
+      .img1{
+        margin-bottom: 287px;
+      }
+      .img2{
+        margin-bottom: 172px;
+        margin-top: 76px;
+      }
+    }
+    &.betterOff{
+      display: flex;
+      gap: 84px;
+      position: relative;
+      width: 100%;
+      .info{
+        margin-top: 34px;
+        max-width: 343px;
+      }
+      .absoluteImg1{
+        position: absolute;
+        top: -34px;
+        right: 50px;
+      }
+    }
+    .title{
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+      color: $color-black;
+    }
+
+    .desc{
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      color: $color-light-black;
+      margin-top: 22px;
+    }
+
+    button{
+      margin-top: 50px;
+    }
+  }
+
+  .contactForm{
+    margin-top: 105px;
+  }
+}
